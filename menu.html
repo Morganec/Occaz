@@ -75,7 +75,7 @@
       
       
         <li  class="list-group-item"><h4 class="list-group-item-heading">Type : </h4>
-        <select class="form-control"  id="type" onchange="affiche(this.value, document.form.type.value, document.form.prix.value)">
+        <select class="form-control"  id="type" onchange="affiche(document.form.taille.value, this.value, document.form.prix.value)">
           <option value=0>tout</option>
           <?php include('connection.php'); 
             $sql="SELECT * from Type ";
@@ -89,12 +89,12 @@
       
       
         <li  class="list-group-item"><h4 class="list-group-item-heading">Prix : </h4>
-        <select class="form-control" name="prix" onchange="affiche(this.value, document.form.type.value, document.form.prix.value)">
+        <select class="form-control" name="prix" onchange="affiche(document.form.taille.value, document.form.type.value, this.value)">
           <option value=0>tout</option>
-          <option>à 1€</option>
-          <option>inférieur à 2€</option>
-          <option>Entre 2€ et 5€</option>
-          <option>Superieur à 5€</option>
+          <option value=1>à 1€</option>
+          <option value=2>inférieur ou égale à 2€</option>
+          <option value=3>Entre 2€ et 5€</option>
+          <option value=4>Superieur à 5€</option>
         </select></li>
       
         
