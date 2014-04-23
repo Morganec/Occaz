@@ -80,7 +80,7 @@ CREATE TABLE `Vetement` (
   `nomVet` varchar(50) DEFAULT NULL,
   `idType` int(11) NOT NULL,
   `idTaille` int(11) NOT NULL,
-  `marque` bit,
+  `marque` boolean,
   `matiere` varchar(50) DEFAULT NULL,
   `couleur` varchar(50) DEFAULT NULL,
   `prix` int(11) NOT NULL,
@@ -96,19 +96,9 @@ CREATE TABLE `Vetement` (
 -- Dumping data for table `Vetement`
 --
 
-/*LOCK TABLES `Vetement` WRITE;
-/*!40000 ALTER TABLE `Vetement` DISABLE KEYS ;
-INSERT INTO `Vetement` VALUES (4,'robe d\'ete',1,1,X,'coton','rouge',3,'img1robe.jpg','img1robeD.jpg'),(5,'robe de soirée',1,'soie','bleu',5,'img2robe.jpg','img2robeD.jpg'),(6,'robe decontracte',1,'laine','vert',4,'img3robe.jpg','img3robeD.jpg'),(7,'pull doux',2,'laine','blanc',4,'img1pull.jpg',NULL),(8,'pull chaud',2,'laine','noir',4,'img2pull.jpg',NULL),(9,'pull troue',2,'cotton','rouge',1,'img3pull.jpg',NULL),(10,'jean confortable',3,'cotton','bleu',1,'img1jean.jpg',NULL),(11,'jean confortable',3,'cotton','bleu',1,'img2jean.jpg',NULL),(12,'jean confortable',3,'cotton','bleu',1,'img3jean.jpg',NULL),(14,'pull leopard',2,'synthetique','rose blanc',5,'img4pull.jpg',NULL);
-/*!40000 ALTER TABLE `Vetement` ENABLE KEYS ;
+LOCK TABLES `Vetement` WRITE;
+
+INSERT INTO `Vetement` VALUES (null,'robe d\'ete',1,1,false,'coton','rouge',3,'img1robe.jpg','img1robeD.jpg'),(null,'robe de soirée',1,2,true,'soie','bleu',5,'img2robe.jpg','img2robeD.jpg'),(null,'robe decontracte',1,4,false,'laine','vert',4,'img3robe.jpg','img3robeD.jpg'),(null,'pull doux',2,6,false,'laine','blanc',4,'img1pull.jpg',NULL),(null,'pull chaud',2,4,true,'laine','noir',4,'img2pull.jpg',NULL),(null,'pull troue',2,1,true,'cotton','rouge',1,'img3pull.jpg',NULL),(null,'jean confortable',3,2,true,'cotton','bleu',1,'img1jean.jpg',NULL),(null,'jean confortable',3,6,false,'cotton','bleu',1,'img2jean.jpg',NULL),(null,'jean confortable',3,5,false,'cotton','bleu',1,'img3jean.jpg',NULL),(null,'pull leopard',2,1,true,'synthetique','rose blanc',5,'img4pull.jpg',NULL);
+
 UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE ;*/
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2014-03-31 16:20:23
