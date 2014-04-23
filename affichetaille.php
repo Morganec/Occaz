@@ -1,17 +1,17 @@
 <?php
 require_once('connection.php');
-if($_GET['num']==0){
+echo $_GET['ty'];
+if($_GET['ta']==0 && $_GET['ty']==0 && $_GET['p'];){
 	$sql="SELECT * FROM Vetement";
 }else {
-	$sql="SELECT * FROM Vetement where idTaille=".$_GET['num']."";
+	$sql="SELECT * FROM Vetement where idTaille=".$_GET['ta']."";
 }
 
 $result =$mysqli->query($sql);
 
 
 
-/*while (NULL != ($row = $result->fetch_array())) {
-	echo $row['nomVet'];
+/*IL EST TEMPS DE FAIRE DES SECLECT 
 }*/
 
 

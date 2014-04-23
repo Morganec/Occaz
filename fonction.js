@@ -1,6 +1,7 @@
-function affiche(valeur){
+function affiche(valeurta, valeurty, valeurp){
 	
 	xmlhttp=new XMLHttpRequest();
+	
 	xmlhttp.onreadystatechange=function(){
 		if (xmlhttp.readyState==4 && xmlhttp.status==200)  //si on est bien a letape 4
 			//document.getElementById("vet").style.display="block";
@@ -10,9 +11,12 @@ function affiche(valeur){
 
 
 	}
-	xmlhttp.open("GET","../affichetaille.php?num="+valeur,true);
+	xmlhttp.open("GET","../affichetaille.php?ta="+valeurta+"&ty="+valeurty+"&p="+valeurp,true);
 	xmlhttp.send();
 }
+
+
+
 
 function zoom(i){
 	var a = "img"+i;
