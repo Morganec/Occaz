@@ -55,81 +55,81 @@
 <div class="row">
   <div class="col-md-4">
     <ul class="list-group">
-<form class="form-horizontal" role="form" id="form" name="form">
-  
-      
-      
+      <form class="form-horizontal" role="form" id="form" name="form">
+        
+        
+        
         <li  class="list-group-item"><h4 class="list-group-item-heading">Taille : </h4>
-        <select class="form-control" name="taille" onchange="affiche(this.value, document.form.type.value, document.form.prix.value)">
+          <select class="form-control" name="taille" onchange="affiche(this.value, document.form.type.value, document.form.prix.value)">
 
-          <option value=0>tout</option>
-          <?php include('connection.php'); 
+            <option value=0>tout</option>
+            <?php include('connection.php'); 
             $sql="SELECT * from Taille ";
             $res=$mysqli->query($sql);
             while (NULL != ($row = $res->fetch_array())) { ?>
-              <option value="<?php echo($row["idTaille"])?>"><?php echo($row["nomTaille"])?>
-                </option><?php 
+            <option value="<?php echo($row["idTaille"])?>"><?php echo($row["nomTaille"])?>
+              </option><?php 
             } ?>
+            
+          </select></li>
           
-        </select></li>
-      
-      
-        <li  class="list-group-item"><h4 class="list-group-item-heading">Type : </h4>
-        <select class="form-control"  id="type" onchange="affiche(document.form.taille.value, this.value, document.form.prix.value)">
-          <option value=0>tout</option>
-          <?php include('connection.php'); 
-            $sql="SELECT * from Type ";
-            $res=$mysqli->query($sql);
-            while (NULL != ($row = $res->fetch_array())) { ?>
+          
+          <li  class="list-group-item"><h4 class="list-group-item-heading">Type : </h4>
+            <select class="form-control"  id="type" onchange="affiche(document.form.taille.value, this.value, document.form.prix.value)">
+              <option value=0>tout</option>
+              <?php include('connection.php'); 
+              $sql="SELECT * from Type ";
+              $res=$mysqli->query($sql);
+              while (NULL != ($row = $res->fetch_array())) { ?>
               <option value="<?php echo($row["idType"])?>"><?php echo($row["nomType"])?>
                 </option><?php 
-            } ?>
-        </select></li>
+              } ?>
+            </select></li>
 
-      
-      
-        <li  class="list-group-item"><h4 class="list-group-item-heading">Prix : </h4>
-        <select class="form-control" name="prix" onchange="affiche(document.form.taille.value, document.form.type.value, this.value)">
-          <option value=0>tout</option>
-          <option value=1>à 1€</option>
-          <option value=2>inférieur ou égale à 2€</option>
-          <option value=3>Entre 2€ et 5€</option>
-          <option value=4>Superieur à 5€</option>
-        </select></li>
-      
+            
+            
+            <li  class="list-group-item"><h4 class="list-group-item-heading">Prix : </h4>
+              <select class="form-control" name="prix" onchange="affiche(document.form.taille.value, document.form.type.value, this.value)">
+                <option value=0>tout</option>
+                <option value=1>à 1€</option>
+                <option value=2>inférieur ou égale à 2€</option>
+                <option value=3>Entre 2€ et 5€</option>
+                <option value=4>Superieur à 5€</option>
+              </select></li>
+              
+              
+            </form>
+          </ul>
+        </div>
         
-</form>
-</ul>
-    </div>
- 
 
 
-  <div class="col-md-8">
-    <div id="vet"> 
-  <?php
-require_once('connection.php');
+        <div class="col-md-8">
+          <div id="vet"> 
+            <?php
+            require_once('connection.php');
 
-  $sql="SELECT * FROM Vetement";
+            $sql="SELECT * FROM Vetement";
 
 
-$result =$mysqli->query($sql);
+            $result =$mysqli->query($sql);
 
-$i = 1;
-$bull=true;
-while ($bull) {
+            $i = 1;
+            $bull=true;
+            while ($bull) {
 
-  echo '<table align="center"><tr>';
-  for( $y=0, $bull=false; $y<3 && ($row = $result->fetch_array()) ; $y++){
-    echo '<td onmouseover="zoom('.$i.')" onmouseout="dezoom('.$i.')"><table align="center"><tr align="center"><td><a href="lien.php?id='.$row['idVet'].'"><img id="img'.$i.'" src="../images/vet/'.$row['image'].'" width="200" height="200"/></a></td><tr align="center"><td>Seulement'.$row['prix'].'€!!</td></tr></table></td>';
-    $i++;
-    $bull=true;
-  }
-  echo '</tr>';
+              echo '<table align="center"><tr>';
+              for( $y=0, $bull=false; $y<3 && ($row = $result->fetch_array()) ; $y++){
+                echo '<td onmouseover="zoom('.$i.')" onmouseout="dezoom('.$i.')"><table align="center"><tr align="center"><td><a href="lien.php?id='.$row['idVet'].'"><img id="img'.$i.'" src="../images/vet/'.$row['image'].'" width="200" height="200"/></a></td><tr align="center"><td>Seulement'.$row['prix'].'€!!</td></tr></table></td>';
+                $i++;
+                $bull=true;
+              }
+              echo '</tr>';
 
-}
-echo '</table>';
+            }
+            echo '</table>';
 
-?> 
-</div>
-  </div>
-</div>
+            ?> 
+          </div>
+        </div>
+      </div>
