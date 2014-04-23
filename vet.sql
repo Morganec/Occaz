@@ -35,7 +35,7 @@ CREATE TABLE `Type` (
 
 LOCK TABLES `Type` WRITE;
 /*!40000 ALTER TABLE `Type` DISABLE KEYS */;
-INSERT INTO `Type` VALUES (1,'robes'),(2,'pulls'),(3,'pantalons'),(4,'vestes'),(5,'Tops'),(6,'pijamas'),(7,'sac à dos'),(8,'sac à main');
+INSERT INTO `Type` VALUES (1,'robes'),(2,'pulls'),(3,'pantalons'),(4,'vestes'),(5,'Tops'),(6,'pijamas'),(7,'sac a dos'),(8,'sac a main');
 /*!40000 ALTER TABLE `Type` ENABLE KEYS */;
 UNLOCK TABLES;
 
