@@ -35,10 +35,39 @@ CREATE TABLE `Type` (
 
 LOCK TABLES `Type` WRITE;
 /*!40000 ALTER TABLE `Type` DISABLE KEYS */;
-INSERT INTO `Type` VALUES (1,'robe'),(2,'pull'),(3,'jean');
+INSERT INTO `Type` VALUES (1,'robes'),(2,'pulls'),(3,'pantalons'),(4,'vestes'),(5,'Tops'),(6,'chaussures'),(7,'pijamas');
 /*!40000 ALTER TABLE `Type` ENABLE KEYS */;
 UNLOCK TABLES;
 
+
+
+
+--
+-- Table structure for table `Taille`
+--
+
+DROP TABLE IF EXISTS `Taille`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Taille` (
+  `idTaille` int(11) NOT NULL AUTO_INCREMENT,
+  `nomTaille` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idTaille`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Taille`
+--
+
+
+
+
+LOCK TABLES `Taille` WRITE;
+/*!40000 ALTER TABLE `Taille` DISABLE KEYS */;
+INSERT INTO `Taille` VALUES (1,'34'),(2,'36'),(3,'38'),(4,'40'),(5,'42'),(6,'44'),(7,'46');
+/*!40000 ALTER TABLE `Taille` ENABLE KEYS */;
+UNLOCK TABLES;
 --
 -- Table structure for table `Vetement`
 --
@@ -50,6 +79,8 @@ CREATE TABLE `Vetement` (
   `idVet` int(11) NOT NULL AUTO_INCREMENT,
   `nomVet` varchar(50) DEFAULT NULL,
   `idType` int(11) NOT NULL,
+  `idTaille` int(11) NOT NULL,
+  `marque` bit,
   `matiere` varchar(50) DEFAULT NULL,
   `couleur` varchar(50) DEFAULT NULL,
   `prix` int(11) NOT NULL,
@@ -65,12 +96,12 @@ CREATE TABLE `Vetement` (
 -- Dumping data for table `Vetement`
 --
 
-LOCK TABLES `Vetement` WRITE;
-/*!40000 ALTER TABLE `Vetement` DISABLE KEYS */;
-INSERT INTO `Vetement` VALUES (4,'robe d\'ete',1,'coton','rouge',3,'img1robe.jpg','img1robeD.jpg'),(5,'robe de soirée',1,'soie','bleu',5,'img2robe.jpg','img2robeD.jpg'),(6,'robe decontracte',1,'laine','vert',4,'img3robe.jpg','img3robeD.jpg'),(7,'pull doux',2,'laine','blanc',4,'img1pull.jpg',NULL),(8,'pull chaud',2,'laine','noir',4,'img2pull.jpg',NULL),(9,'pull troue',2,'cotton','rouge',1,'img3pull.jpg',NULL),(10,'jean confortable',3,'cotton','bleu',1,'img1jean.jpg',NULL),(11,'jean confortable',3,'cotton','bleu',1,'img2jean.jpg',NULL),(12,'jean confortable',3,'cotton','bleu',1,'img3jean.jpg',NULL),(14,'pull leopard',2,'synthetique','rose blanc',5,'img4pull.jpg',NULL);
-/*!40000 ALTER TABLE `Vetement` ENABLE KEYS */;
+/*LOCK TABLES `Vetement` WRITE;
+/*!40000 ALTER TABLE `Vetement` DISABLE KEYS ;
+INSERT INTO `Vetement` VALUES (4,'robe d\'ete',1,1,X,'coton','rouge',3,'img1robe.jpg','img1robeD.jpg'),(5,'robe de soirée',1,'soie','bleu',5,'img2robe.jpg','img2robeD.jpg'),(6,'robe decontracte',1,'laine','vert',4,'img3robe.jpg','img3robeD.jpg'),(7,'pull doux',2,'laine','blanc',4,'img1pull.jpg',NULL),(8,'pull chaud',2,'laine','noir',4,'img2pull.jpg',NULL),(9,'pull troue',2,'cotton','rouge',1,'img3pull.jpg',NULL),(10,'jean confortable',3,'cotton','bleu',1,'img1jean.jpg',NULL),(11,'jean confortable',3,'cotton','bleu',1,'img2jean.jpg',NULL),(12,'jean confortable',3,'cotton','bleu',1,'img3jean.jpg',NULL),(14,'pull leopard',2,'synthetique','rose blanc',5,'img4pull.jpg',NULL);
+/*!40000 ALTER TABLE `Vetement` ENABLE KEYS ;
 UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE ;*/
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
