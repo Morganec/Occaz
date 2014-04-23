@@ -11,7 +11,7 @@ function affiche(valeurta, valeurty, valeurp){
 
 
 	}
-	xmlhttp.open("GET","../affichetaille.php?ta="+valeurta+"&ty="+valeurty+"&p="+valeurp,true);
+	xmlhttp.open("GET","../affiche.php?ta="+valeurta+"&ty="+valeurty+"&p="+valeurp,true);
 	xmlhttp.send();
 }
 
