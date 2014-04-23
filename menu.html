@@ -61,21 +61,26 @@
       
         <li  class="list-group-item"><h4 class="list-group-item-heading">Taille : </h4>
         <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+          <?php include('connection.php'); 
+            $sql="SELECT * from Taille ";
+            $res=$mysqli->query($sql);
+            while (NULL != ($row = $res->fetch_array())) { ?>
+              <option value="<?php echo($row["idTaille"])?>"><?php echo($row["nomTaille"])?>
+                </option><?php 
+            } ?>
+          
         </select></li>
       
       
         <li  class="list-group-item"><h4 class="list-group-item-heading">Type : </h4>
         <select class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+          <?php include('connection.php'); 
+            $sql="SELECT * from Type ";
+            $res=$mysqli->query($sql);
+            while (NULL != ($row = $res->fetch_array())) { ?>
+              <option value="<?php echo($row["idType"])?>"><?php echo($row["nomType"])?>
+                </option><?php 
+            } ?>
         </select></li>
 
       
