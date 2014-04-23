@@ -1,7 +1,7 @@
 <?php
 require_once('connection.php');
 
-if($_GET['ta']==0 && $_GET['ty']==0 && $_GET['p']==0){
+if($_GET['ta']==0 && $_GET['ty']==0 && $_GET['p']==0 && $_GET['fac']==0){
 	$sql="SELECT * FROM Vetement";
 }else {
 	$sql="SELECT * FROM Vetement ";
@@ -22,6 +22,15 @@ if($_GET['ta']==0 && $_GET['ty']==0 && $_GET['p']==0){
 		}
 		else {
 			$sql=$sql." AND idType =".$_GET['ty'];
+		}
+	}
+	if($_GET['fac']!=0){
+		if ($where==false){
+			$sql=$sql."WHERE idGenre =".$_GET['fac'];
+			$where=true;
+		}
+		else {
+			$sql=$sql." AND idGenre =".$_GET['fac'];
 		}
 	}
 	if($_GET['p']!=0){

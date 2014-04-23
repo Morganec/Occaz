@@ -1,4 +1,7 @@
-function affiche(valeurta, valeurty, valeurp){
+function affiche(valeurta, valeurty, valeurp, fac){
+	if(!fac){
+		fac= 0;
+	}
 	
 	xmlhttp=new XMLHttpRequest();
 	
@@ -11,7 +14,7 @@ function affiche(valeurta, valeurty, valeurp){
 
 
 	}
-	xmlhttp.open("GET","../affiche.php?ta="+valeurta+"&ty="+valeurty+"&p="+valeurp,true);
+	xmlhttp.open("GET","../affiche.php?ta="+valeurta+"&ty="+valeurty+"&p="+valeurp+"&fac="+fac,true);
 	xmlhttp.send();
 }
 
