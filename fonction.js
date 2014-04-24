@@ -62,4 +62,3 @@ function descr(id){
 	xmlhttp.open("GET","../descr.php?id="+id,true);
 	xmlhttp.send();
 }
-	
