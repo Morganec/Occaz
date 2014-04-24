@@ -4,3 +4,5 @@
 
 
 <script>document.getElementById("div").innerHTML="'.$row['idVet'].'";</script>
+
+<a href="#"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalAffiche">
