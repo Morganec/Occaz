@@ -84,7 +84,7 @@ while ($bull) {
 
 	echo '<table align="center"><tr>';
 	for( $y=0, $bull=false; $y<3 && ($row = $result->fetch_array()) ; $y++){
-		echo '<td onmouseover="zoom('.$i.')" onmouseout="dezoom('.$i.')"><table align="center"><tr align="center"><td><a href="#"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalAffiche"><img id="img'.$i.'" src="../images/vet/'.$row['image'].'" width="200" height="200"/></button></a></td><tr align="center"><td>Seulement'.$row['prix'].'€!!</td><div id="de'.$i.'"></div></tr></table></td>';
+		echo '<td onmouseover="zoom('.$i.')" onmouseout="dezoom('.$i.')"><table align="center"><tr align="center"><td><img id="img'.$i.'" src="../images/vet/'.$row['image'].'" width="200" height="200" onclick="descr('.$row["idVet"].')"/></td><tr align="center"><td>Seulement'.$row['prix'].'€!!</td><div id="de'.$i.'"></div></tr></table></td>';
 		$i++;
 		$bull=true;
 	}
