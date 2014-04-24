@@ -43,3 +43,7 @@ function dezoom(i){
 	img.style.width="200px";
 	
 }
+
+function afficheDescr(id){
+	alerte(id)
+}

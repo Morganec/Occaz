@@ -1,0 +1,6 @@
+../lien.php?id='.$row['idVet'].'
+
+../menu.php?id='.$row['idVet'].'
+
+
+<script>document.getElementById("div").innerHTML="'.$row['idVet'].'";</script>
