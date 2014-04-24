@@ -23,8 +23,10 @@ function affiche(valeurta, valeurty, valeurp, fac){
 
 function zoom(i){
 	var a = "img"+i;
-	
+	var b = "de"+i;
 	var img = document.getElementById(a);
+	var detail = document.getElementById(b);
+	detail.innerHTML = "Clique pour plus de détail ! ";
 	img.style.height="400px";
 	img.style.width="400px";
 	
@@ -33,8 +35,10 @@ function zoom(i){
 
 function dezoom(i){
 	var a ="img"+i;
-
+	var b = "de"+i;
 	var img = document.getElementById(a);
+	var detail = document.getElementById(b);
+	detail.innerHTML = "";
 	img.style.height="200px";
 	img.style.width="200px";
 	
