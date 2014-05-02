@@ -6,3 +6,30 @@
 <script>document.getElementById("div").innerHTML="'.$row['idVet'].'";</script>
 
 <a href="#"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalAffiche">
+
+
+<table>
+		<tr>
+			<td rowspan="3">
+				<img id="img" src="../images/vet/<?php echo $row['image'] ?>" width="400" height="400" onclick="changerImage(<?php echo $row['image'] ?>,<?php echo $row['image2'] ?>)" />
+			</td>
+			<td colspan="2">caracteristique</td>
+		</tr>
+		<tr>
+			<td colspan="2">couleur</td>
+
+		</tr>
+		<tr>
+			<td>prix</td>
+			<td>photo</td>
+
+
+		</tr>
+		<tr>
+			<td colspan="3">
+				commander
+			</td>
+		</tr>
+	</table>
+
+	<table><caption><?php echo $row['nomVet'] ?></caption>'
