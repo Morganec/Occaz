@@ -8,7 +8,7 @@ include("../header.html");
 <div class="row">
   <div class="col-md-12">
    
-  <form method="post" action="../trait/login.php">
+  <form method="post" action="../trait/ajouter.php">
     
       
       Nom Vetement: <input type="text" class="form-control" id="nomVet" name="nomVet"  /><br/><br/>
@@ -56,7 +56,7 @@ include("../header.html");
       </select>
       <br/><br/>
 
-      <input type="checkbox" id="marque" name="marque"> Coche cette case si ce Vetement est de marque
+      <!--<input type="checkbox" id="marque" name="marque"> Coche cette case si ce Vetement est de marque-->
 <br/><br/>
 
 Couleur Vetement: <input type="text" class="form-control" id="couleur" name="couleur" placeholder="Text" /><br/><br/>
