@@ -56,9 +56,9 @@ include("../header.html");
       </select>
       <br/><br/>
 
-      <!--<input type="checkbox" id="marque" name="marque"> Coche cette case si ce Vetement est de marque-->
+      <input type="checkbox" id="marque" name="marque"> Coche cette case si ce Vetement est de marque
 <br/><br/>
-
+Matiere Vetement: <input type="text" class="form-control" id="matiere" name="matiere" placeholder="Text" /><br/><br/>
 Couleur Vetement: <input type="text" class="form-control" id="couleur" name="couleur" placeholder="Text" /><br/><br/>
 
 Prix du Vetement: <input type="int" class="form-control" id="prix" name="prix" placeholder="entier" /><br/><br/>
