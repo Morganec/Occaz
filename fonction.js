@@ -65,6 +65,6 @@ function descr(id){
 
 function changerImage(img1,img2){
 	
-	document.getElementById('img').src="../images/vet/"+img2;
-	document.getElementById('imgb').src="../images/vet/"+img1;
+	document.getElementById('img').src="../images/vet2/"+img2;
+	document.getElementById('imgb').src="../images/vet2/"+img1;
 }
